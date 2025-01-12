@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enhanced Unit Converter</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Unit Converter</h1>
+    
+    <select id="category" onchange="populateUnits()">
+      <option value="length">Length</option>
+      <option value="weight">Weight</option>
+      <option value="temperature">Temperature</option>
+      <option value="area">Area</option>
+      <option value="volume">Volume</option>
+      <option value="speed">Speed</option>
+      <option value="time">Time</option>
+      <option value="digital">Digital Storage</option>
+    </select>
+
+    <div class="converter">
+      <input type="number" id="inputValue" placeholder="Enter value" />
+      
+      <div class="selectors">
+        <select id="fromUnit"></select>
+        <span>to</span>
+        <select id="toUnit"></select>
+      </div>
+      
+      <button onclick="convert()">Convert</button>
+      
+      <p id="result"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
