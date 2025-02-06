@@ -11,16 +11,16 @@ RUN yum update -y && \
 RUN cd /var/www/html
 
 # download webfiles
-RUN wget https://github.com/clahenry/Units-Converter/blob/main/Units-Converter.zip
+RUN wget https://github.com/clahenry/Units-Converter/blob/main/website.zip
 
 # unzip folder
-RUN unzip Units-Converter.zip
+RUN unzip website.zip
 
 # copy files into html directory
-RUN cp -r Units-Converter/* /var/www/html/
+RUN cp -r website/* /var/www/html/
 
 # remove unwanted folder
-RUN rm -rf Units-Converter Units-Converter.zip
+RUN rm -rf website website.zip
 
 # exposes port 80 on the container
 EXPOSE 80
